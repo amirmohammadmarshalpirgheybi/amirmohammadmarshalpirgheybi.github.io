@@ -116,7 +116,7 @@
     }
 
     .item-title {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 1.05rem;
     }
 
@@ -125,14 +125,8 @@
       font-size: 0.95rem;
     }
 
-    ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
+    ul { margin-top: 10px; padding-left: 20px; }
+    li { margin-bottom: 6px; }
 
     footer {
       text-align: center;
@@ -144,12 +138,6 @@
       margin-top: 50px;
     }
 
-    .email {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
     .links a {
       color: #fff;
       text-decoration: none;
@@ -157,10 +145,7 @@
       font-weight: 500;
       border-bottom: 2px solid transparent;
     }
-
-    .links a:hover {
-      border-color: rgba(255,255,255,0.7);
-    }
+    .links a:hover { border-color: rgba(255,255,255,0.7); }
   </style>
 </head>
 
@@ -168,114 +153,135 @@
   <header>
     <img src="profile.jpg" alt="Amir Marshal" class="profile-img" />
     <h1>Amir Marshal</h1>
-    <p>MASc Student · Management Sciences & Engineering · University of Waterloo</p>
+    <p>MASc Student · Management Sciences &amp; Engineering · University of Waterloo</p>
     <p class="links">
-      <a href="mailto:amir.marshalpirgheybi@uwaterloo.ca" class="email">Email</a> ·
-      <a href="https://amirmohammadmarshalpirgheybi.github.io" target="_blank">Website</a> ·
-      <a href="https://linkedin.com/in/amirmarshal" target="_blank">LinkedIn</a>
+      <a href="mailto:amir.marshalpirgheybi@uwaterloo.ca">Email</a> ·
+      <a href="https://linkedin.com/in/amirmarshal" target="_blank" rel="noopener">LinkedIn</a>
+      <!-- Website link removed (we're already on the website) -->
     </p>
   </header>
 
   <nav>
     <a href="#about">About</a>
-    <a href="#research">Research</a>
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
     <a href="#publications">Publications</a>
     <a href="#teaching">Teaching</a>
+    <a href="#honors">Honors</a>
     <a href="#cv">CV</a>
   </nav>
 
   <main>
-    <!-- Updated About Section -->
+    <!-- About -->
     <section id="about">
       <h2>About Me</h2>
       <div class="card">
         <p>
-          I am a Master of Applied Science (MASc) student in the Department of Management Sciences 
-          at the <strong>University of Waterloo</strong>, supervised by 
-          <strong>Professor Hossein Abouee Mehrizi</strong> and 
+          I am a Master of Applied Science (MASc) student in the Department of Management Sciences
+          at the <strong>University of Waterloo</strong>, supervised by
+          <strong>Professor Hossein Abouee Mehrizi</strong> and
           <strong>Professor Nasser Barjesteh</strong> (Rotman School of Management, University of Toronto).
         </p>
       </div>
     </section>
 
-    <section id="research">
-      <h2>Research Interests</h2>
-      <div class="card">
-        <p><strong>Optimization</strong>, <strong>Stochastic Processes</strong>, <strong>Queueing Theory</strong>, <strong>Reinforcement Learning</strong>, 
-        <strong>Dynamic Programming</strong>, <strong>Scheduling</strong>, <strong>Optimal Transport</strong>, <strong>Information Theory</strong></p>
-      </div>
-    </section>
-
+    <!-- Education -->
     <section id="education">
       <h2>Education</h2>
       <div class="card">
-        <div class="item-title">MASc in Management Sciences & Engineering</div>
-        <div class="muted">University of Waterloo · Waterloo, Canada (Sep 2024 – Present) · GPA: 91/100</div>
+        <div class="item-title">MASc in Management Sciences &amp; Engineering</div>
+        <div class="muted">University of Waterloo · Waterloo, Canada · Sep 2024 – Present · GPA: 91/100</div>
       </div>
       <div class="card">
         <div class="item-title">BSc in Electrical Engineering</div>
-        <div class="muted">Sharif University of Technology · Tehran, Iran (Sep 2019 – Aug 2024) · GPA: 19.05/20</div>
+        <div class="muted">Sharif University of Technology · Tehran, Iran · Sep 2019 – Aug 2024 · GPA: 19.05/20</div>
       </div>
     </section>
 
+    <!-- Experience (no task details; just supervisors, duration, place) -->
     <section id="experience">
       <h2>Experience</h2>
+
       <div class="card">
-        <div class="item-title">Graduate Research Assistant · University of Waterloo</div>
-        <div class="muted">Supervisors: Hossein Abouee-Mehrizi, Nasser Barjesteh (Sep 2024 – Present)</div>
-        <ul>
-          <li>Develop dynamic scheduling/control policies for multiclass multi-server networks with waiting-time-dependent transitions.</li>
-          <li>Use heavy-traffic approximations to analyze barrier-type optimal policies.</li>
-          <li>Validate theoretical results through Monte Carlo simulations on the Trillium HPC cluster.</li>
-        </ul>
+        <div class="item-title">Graduate Research Assistant</div>
+        <div class="muted">
+          University of Waterloo · Waterloo, Canada · Sep 2024 – Present<br/>
+          Supervisors: Hossein Abouee Mehrizi, Nasser Barjesteh
+        </div>
       </div>
 
       <div class="card">
-        <div class="item-title">Undergraduate Research Assistant · Sharif University of Technology</div>
-        <div class="muted">Sep 2022 – Aug 2024 · Tehran, Iran</div>
-        <ul>
-          <li>Studied quantum computation and information, exploring their connections to learning theory.</li>
-          <li>Analyzed classical results in optimal transport (Kantorovich duality, Brenier’s theorem, McCann convexity) and transport inequalities (Talagrand’s \(T_2\), Bobkov–Götze).</li>
-        </ul>
+        <div class="item-title">Undergraduate Research Assistant</div>
+        <div class="muted">
+          Sharif University of Technology · Tehran, Iran · Sep 2022 – Aug 2024<br/>
+          Supervisor: Mohammad Hossein Yasayee
+        </div>
       </div>
 
       <div class="card">
-        <div class="item-title">Undergraduate Research Assistant · University of Waterloo</div>
-        <div class="muted">Sep 2023 – Aug 2024 · Waterloo, Canada</div>
-        <ul>
-          <li>Balanced and cleaned a large dataset of Persian poems with IPA annotations.</li>
-          <li>Fine-tuned GPT-3 using PPO and DPO methods to generate rhythmically consistent Persian poetry.</li>
-        </ul>
+        <div class="item-title">Undergraduate Research Assistant</div>
+        <div class="muted">
+          University of Waterloo · Waterloo, Canada · Sep 2023 – Aug 2024<br/>
+          Supervisor: Ali Ghodsi
+        </div>
       </div>
     </section>
 
+    <!-- Publications -->
     <section id="publications">
-      <h2>Publications & Working Papers</h2>
+      <h2>Publications &amp; Working Papers</h2>
       <div class="card">
         <ul>
-          <li><em>Dynamic Control of Multiclass Multi-Episode Service Systems with Waiting-Time-Dependent Transitions</em> — with Hossein Abouee-Mehrizi, Nasser Barjesteh, and Brendan Wylie-Toal (Working Paper, 2025)</li>
+          <li>
+            <em>Dynamic Control of Multiclass Multi-Episode Service Systems with Waiting-Time-Dependent Transitions</em><br/>
+            with Hossein Abouee-Mehrizi, Nasser Barjesteh, and Brendan Wylie-Toal (Working Paper, 2025)
+          </li>
         </ul>
       </div>
     </section>
 
+    <!-- Teaching -->
     <section id="teaching">
-      <h2>Teaching</h2>
+      <h2>Teaching Experience</h2>
       <div class="card">
+        <div class="item-title">Teaching Assistant · University of Waterloo (Sep 2024 – Present)</div>
         <ul>
-          <li>Teaching Assistant, <em>Operation Analytics (MSE 719)</em></li>
-          <li>Teaching Assistant, <em>Engineering Economics (MSE 261)</em></li>
-          <li>Teaching Assistant, <em>Simulation Analysis and Design (MSE 333)</em></li>
-          <li>Teaching Assistant, <em>Advanced Calculus and Numerical Methods (MSE 271)</em></li>
+          <li>MSE 271 — Advanced Calculus and Numerical Methods</li>
+          <li>MSE 261 — Engineering Economics</li>
+          <li>MSE 719 — Operation Analytics</li>
+          <li>MSE 333 — Simulation Analysis and Design</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="item-title">Teaching Assistant · Sharif University of Technology (Sep 2022 – Aug 2024)</div>
+        <ul>
+          <li>Convex Optimization I</li>
+          <li>Probability and Statistics</li>
+          <li>Introduction to Machine Learning</li>
+          <li>Information Theory, Statistics, and Learning</li>
         </ul>
       </div>
     </section>
 
+    <!-- Honors -->
+    <section id="honors">
+      <h2>Honors &amp; Awards</h2>
+      <div class="card">
+        <ul>
+          <li>Graduate Research Scholarship, Management Sciences &amp; Engineering, University of Waterloo (2024)</li>
+          <li>Ranked 3rd among 150 Electrical Engineering students, Sharif University of Technology (2024)</li>
+          <li>Silver Medal, International Olympiad on Astronomy and Astrophysics, Hungary (2019)</li>
+          <li>Gold Medal, Iranian National Olympiad on Astronomy and Astrophysics (2018)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CV -->
     <section id="cv">
       <h2>Curriculum Vitae</h2>
       <div class="card">
-        <p>You can download my full CV <a href="CV_AmirMarshal.pdf" target="_blank">here (PDF)</a>.</p>
+        <p>You can download my full CV <a href="CV_AmirMarshal.pdf" target="_blank" rel="noopener">here (PDF)</a>.</p>
       </div>
     </section>
   </main>
