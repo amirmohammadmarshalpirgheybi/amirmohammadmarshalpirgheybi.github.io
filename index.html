@@ -2,174 +2,330 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amir Marshal | Master's Student in Operations Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amir Marshal | MASc Student</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <style>
-    body {
+    :root{
+      --uw-blue:#004080;
+      --uw-accent:#007acc;
+      --ink:#333;
+      --muted:#666;
+      --bg:#fafafa;
+      --card:#ffffff;
+      --line:#e6e6e6;
+    }
+    *{box-sizing:border-box}
+    body{
       font-family: 'Roboto', sans-serif;
-      margin: 0;
-      color: #333;
-      background-color: #fafafa;
-      line-height: 1.6;
+      margin:0;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.6;
+    }
+    header{
+      text-align:center;
+      padding:64px 20px 44px;
+      background: linear-gradient(135deg, var(--uw-blue), var(--uw-accent));
+      color:#fff;
+    }
+    header h1{
+      margin:0 0 6px;
+      font-size:2.2rem;
+      letter-spacing:.3px;
+      font-weight:700;
+    }
+    header p{margin:6px 0; font-size:1.05rem; opacity:.95}
+    .links a{
+      color:#fff; text-decoration:none; font-weight:500; margin:0 10px;
+      border-bottom:2px solid transparent; padding-bottom:2px
+    }
+    .links a:hover{border-color:rgba(255,255,255,.7)}
+    .profile-img{
+      width:140px; height:140px; border-radius:50%; object-fit:cover;
+      display:block; margin:0 auto 16px; border:3px solid rgba(255,255,255,.85)
     }
 
-    header {
-      text-align: center;
-      padding: 60px 20px 40px;
-      background: linear-gradient(135deg, #004080, #007acc);
-      color: white;
+    nav{
+      position:sticky; top:0; z-index:10;
+      text-align:center; background:#f7f7f7; padding:10px 8px; border-bottom:1px solid var(--line)
+    }
+    nav a{
+      margin:0 10px; color:var(--uw-blue); text-decoration:none; font-weight:500
+    }
+    nav a:hover{text-decoration:underline}
+
+    main{max-width:980px; margin:36px auto; padding:0 18px}
+    section{margin-bottom:42px}
+    h2{
+      color:var(--uw-blue);
+      border-bottom:2px solid var(--uw-accent);
+      padding-bottom:6px; margin-bottom:16px
     }
 
-    header h1 {
-      margin-bottom: 10px;
-      font-size: 2.2em;
-      letter-spacing: 0.5px;
-    }
+    .grid{display:grid; gap:14px}
+    @media (min-width:820px){ .grid-2{grid-template-columns:1fr 1fr} }
 
-    header p {
-      margin: 0;
-      font-size: 1.1em;
-      opacity: 0.9;
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:18px 16px;
+      box-shadow:0 1px 2px rgba(0,0,0,.04);
     }
-
-    nav {
-      text-align: center;
-      background: #f0f0f0;
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd;
+    .item-title{font-weight:600}
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-block; padding:4px 10px; border:1px solid var(--line);
+      border-radius:999px; margin:4px 6px 0 0; font-size:.92rem; background:#fff
     }
+    ul{padding-left:20px; margin:10px 0}
+    .tight li{margin:6px 0}
+    .split-head{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
+    .split-head .loc{color:var(--muted)}
+    .split-head .date{color:var(--muted); font-weight:500}
 
-    nav a {
-      margin: 0 15px;
-      color: #004080;
-      text-decoration: none;
-      font-weight: 500;
+    .download{
+      display:inline-block; margin-top:6px; font-weight:600; color:var(--uw-blue); text-decoration:none
     }
+    .download:hover{text-decoration:underline}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    section {
-      margin-bottom: 50px;
-    }
-
-    h2 {
-      color: #004080;
-      border-bottom: 2px solid #007acc;
-      padding-bottom: 5px;
-    }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 20px;
-      border: 3px solid #007acc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #f0f0f0;
-      color: #666;
-      font-size: 0.9em;
-    }
-
-    .email {
-      color: #004080;
-      text-decoration: none;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .highlight {
-      color: #007acc;
-      font-weight: 500;
+    footer{
+      text-align:center; padding:28px; background:#f0f0f0; color:#666; font-size:.95rem
     }
   </style>
 </head>
-
 <body>
 
   <header>
-    <img src="profile.jpg" alt="Amir Marshal" class="profile-img" />
+    <img src="profile.jpg" alt="Portrait of Amir Marshal" class="profile-img" />
     <h1>Amir Marshal</h1>
-    <p>Master's Applicant in Management Science and Engineering| University of Waterloo</p>
-    <p><a class="email" href="mailto:amir.marshalpirgheybi@uwaterloo.ca">amir.marshalpirgheybi@uwaterloo.ca</a> · 
-       <a class="email" href="https://github.com/amirmohammadmarshalpirgheybi" target="_blank">GitHub</a> ·
-       <a class="email" href="https://linkedin.com/in/amirmohammad-marshalpirgheybi-9511922a2" target="_blank">LinkedIn</a>
+    <p>MASc Student, Management Sciences &amp; Engineering · University of Waterloo</p>
+    <p class="links">
+      <a href="mailto:amir.marshalpirgheybi@uwaterloo.ca">amir.marshalpirgheybi@uwaterloo.ca</a> ·
+      <a href="https://amirmohammadmarshalpirgheybi.github.io" target="_blank" rel="noopener">Website</a> ·
+      <a href="https://linkedin.com/in/amirmarshal" target="_blank" rel="noopener">LinkedIn</a>
     </p>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#research">Research</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
     <a href="#publications">Publications</a>
     <a href="#teaching">Teaching</a>
+    <a href="#awards">Honors</a>
+    <a href="#coursework">Coursework</a>
+    <a href="#skills">Skills</a>
+    <a href="#service">Service</a>
     <a href="#cv">CV</a>
   </nav>
 
   <main>
+    <!-- About -->
     <section id="about">
       <h2>About Me</h2>
-      <p>
-        I am a <span class="highlight">graduate researcher in Operations Research and Management Sciences</span> at the University of Waterloo.
-        My current work focuses on <strong>stochastic processing networks, queueing systems, and heavy-traffic approximations</strong>,
-        with applications in healthcare operations and dynamic scheduling. I am particularly interested in developing 
-        <strong>mathematically grounded, algorithmically efficient, and data-driven decision frameworks</strong> that bridge theory and practice.
-      </p>
+      <div class="card">
+        <p>
+          I am a graduate researcher in <strong>Operations Research / Management Sciences</strong> at the University of Waterloo,
+          working on <strong>stochastic processing networks</strong>, <strong>heavy-traffic approximations</strong>, and
+          <strong>dynamic scheduling &amp; control</strong> with applications to healthcare operations.
+          I aim to design <strong>mathematically principled, computationally efficient, and data-aware</strong> decision frameworks.
+        </p>
+      </div>
     </section>
 
+    <!-- Research Interests -->
     <section id="research">
       <h2>Research Interests</h2>
-      <ul>
-        <li>Dynamic Programming</li>
-        <li>Optimization</li>
-        <li>Reinforcement Learning</li>
-        <li>High Dimensional Statistics</li>
-        <li>Queueing Theory</li>
-        <li>Scheduling</li>
-        
-      </ul>
+      <div class="card">
+        <span class="pill">Optimization</span>
+        <span class="pill">Stochastic Processes</span>
+        <span class="pill">Queueing Theory</span>
+        <span class="pill">Reinforcement Learning</span>
+        <span class="pill">Dynamic Programming</span>
+        <span class="pill">Scheduling</span>
+        <span class="pill">Optimal Transport</span>
+        <span class="pill">Information Theory</span>
+      </div>
     </section>
 
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="split-head">
+            <div class="item-title">MASc, Management Sciences &amp; Engineering</div>
+            <div class="date">Sep 2024 – Present</div>
+          </div>
+          <div class="muted">University of Waterloo · Waterloo, Canada · GPA: 91/100</div>
+        </div>
+        <div class="card">
+          <div class="split-head">
+            <div class="item-title">BSc, Electrical Engineering</div>
+            <div class="date">Sep 2019 – Aug 2024</div>
+          </div>
+          <div class="muted">Sharif University of Technology · Tehran, Iran · GPA: 19.05/20</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="card">
+        <div class="split-head">
+          <div class="item-title">Graduate Research Assistant · University of Waterloo</div>
+          <div class="date">Sep 2024 – Present</div>
+        </div>
+        <div class="loc muted">Waterloo, Canada · Supervisors: Hossein Abouee-Mehrizi &amp; Nasser Barjesteh</div>
+        <ul class="tight">
+          <li>Develop scheduling/control policies for <em>multiclass multi-server</em> stochastic processing networks with <em>wait-time-dependent transitions</em> via heavy-traffic analysis; prove optimality using Itô’s lemma under complete resource pooling.</li>
+          <li>Validate theory through extensive Monte Carlo simulations on the Trillium HPC cluster.</li>
+          <li>Ongoing: RL-based policies for networks with unknown parameters, with mathematical guarantees.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="split-head">
+          <div class="item-title">Undergraduate Research Assistant · Sharif University of Technology</div>
+          <div class="date">Sep 2022 – Aug 2024</div>
+        </div>
+        <div class="loc muted">Tehran, Iran</div>
+        <ul class="tight">
+          <li>Explored quantum computation/information with applications to learning theory and complexity.</li>
+          <li>Studied optimal transport (Kantorovich duality, Brenier’s theorem, McCann’s displacement convexity).</li>
+          <li>Linked transport inequalities (Talagrand’s T2, Bobkov–Götze) to concentration and learning stability.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="split-head">
+          <div class="item-title">Undergraduate Research Assistant · University of Waterloo</div>
+          <div class="date">Sep 2023 – Aug 2024</div>
+        </div>
+        <div class="loc muted">Waterloo, Canada</div>
+        <ul class="tight">
+          <li>Curated &amp; balanced a large Persian poetry dataset; ensured stylistic completeness.</li>
+          <li>Integrated IPA annotations to enhance rhythm/phonetic modeling.</li>
+          <li>Fine-tuned GPT-3 for Persian poem generation using PPO and DPO, improving style and fluency.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Publications -->
     <section id="publications">
-      <h2>Publications & Working Papers</h2>
-      <ul>
-        <li>
-          <em>Dynamic Control of Multiclass Multi-Episode Service Systems with Waiting-Time-Dependent Transitions</em> (Working Paper, 2025)
-        </li>
-      </ul>
+      <h2>Publications &amp; Working Papers</h2>
+      <div class="card">
+        <ul class="tight">
+          <li>
+            <em>Dynamic Control of Multiclass Multi-Episode Service Systems with Waiting-Time-Dependent Transitions</em><br/>
+            with Hossein Abouee-Mehrizi, Nasser Barjesteh, and Brendan Wylie-Toal (Working Paper, 2025)
+          </li>
+        </ul>
+      </div>
     </section>
 
+    <!-- Teaching -->
     <section id="teaching">
-      <h2>Teaching & Mentorship</h2>
-      <ul>
-        <li>Teaching Assistant, <em>Operation Analytics</em> (MSE 719)</li>
-        <li>Teaching Assistant, <em>Engineering Economics</em> (MSE 261) </li>
-        <li>Teaching Assistant, <em>Simulation Analysis and Design</em> (MSE 333)  </li>
-        <li>Teaching Assistant, <em>Advanced Calculus and Numerical Methods</em> (MSE 271)  </li>
-      </ul>
+      <h2>Teaching &amp; Mentorship</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="item-title">Teaching Assistant · University of Waterloo</div>
+          <div class="muted">Sep 2024 – Present</div>
+          <ul class="tight">
+            <li>MSE 271: Advanced Calculus and Numerical Methods</li>
+            <li>MSE 261: Engineering Economics</li>
+            <li>MSE 719: Operation Analytics</li>
+            <li>MSE 333: Simulation Analysis and Design</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="item-title">Teaching Assistant · Sharif University of Technology</div>
+          <div class="muted">Sep 2022 – Aug 2024</div>
+          <ul class="tight">
+            <li>Convex Optimization I</li>
+            <li>Probability and Statistics</li>
+            <li>Introduction to Machine Learning</li>
+            <li>Information Theory, Statistics, and Learning</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
+    <!-- Honors & Awards -->
+    <section id="awards">
+      <h2>Honors &amp; Awards</h2>
+      <div class="card">
+        <ul class="tight">
+          <li>Graduate Research Scholarship, Management Sciences &amp; Engineering, University of Waterloo (2024)</li>
+          <li>Ranked 3rd among 150 Electrical Engineering students, Sharif University of Technology (2024)</li>
+          <li>Silver Medal, International Olympiad on Astronomy and Astrophysics, Hungary (2019)</li>
+          <li>Gold Medal, Iranian National Olympiad on Astronomy and Astrophysics (2018)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Coursework -->
+    <section id="coursework">
+      <h2>Related Coursework</h2>
+      <div class="card">
+        <p><strong>University of Waterloo</strong><br/>
+          Deterministic Models for Operations Research; Probabilistic Models for Operations Research; Theory of Probability
+        </p>
+        <p><strong>Sharif University of Technology</strong><br/>
+          Convex Optimization; Introduction to Machine Learning; ITSL (Information Theory, Statistics, and Learning);
+          High-Dimensional Probability; Big Data; Graph Signal Processing
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="item-title">Programming Languages</div>
+          <p class="muted">Java, Python, C/C++, SQL, R, MATLAB</p>
+        </div>
+        <div class="card">
+          <div class="item-title">Frameworks &amp; Libraries</div>
+          <p class="muted">PyTorch, TensorFlow, NumPy, Pandas, PySpark, Eigen, NLopt, Gurobi</p>
+        </div>
+        <div class="card">
+          <div class="item-title">Tools &amp; Environments</div>
+          <p class="muted">LaTeX, CUDA, OpenCL, GitHub, Linux, Bash</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section id="service">
+      <h2>Service</h2>
+      <div class="card">
+        <ul class="tight">
+          <li>Vice President, CORS Student Chapter, University of Waterloo (2025–Present)</li>
+          <li>Event Coordinator, Resana Association, Sharif University of Technology — React Conference 2024</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CV -->
     <section id="cv">
       <h2>Curriculum Vitae</h2>
-      <p>You can download my full CV <a href="CV_AmirMarshal.pdf" target="_blank">here</a>.</p>
+      <div class="card">
+        <p>You can download my full CV
+          <!-- Update the filename below to match what you host in the repo (e.g., CV_AmirMarshal.pdf). -->
+          <a class="download" href="CV_AmirMarshal.pdf" target="_blank" rel="noopener">here (PDF)</a>.
+        </p>
+        <p class="muted">References available upon request (Hossein Abouee-Mehrizi · Nasser Barjesteh · Hassan Shavandi).</p>
+      </div>
     </section>
   </main>
 
